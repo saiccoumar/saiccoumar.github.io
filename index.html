@@ -1,122 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sai Coumar</title>
     <style>
         body {
-            font-family: Monospace, monospace; /* Change the font-family here */
+            font-family: Monospace, monospace;
             margin: 0;
             padding: 0;
-            background-color: 	#252526 ;
+            background-color: #252526;
         }
+    
         header {
-            font-family: Monospace, monospace; /* Change the font-family here */
+            font-family: Monospace, monospace;
             background-color: #3e3e42;
             color: #ffff00;
             padding: 1%;
         }
+    
         nav {
             display: flex;
-            justify-content: space-between; /* Right-justify Sai Coumar and left-justify others */
-            align-items: center; /* Align items vertically in the center */
+            justify-content: space-between;
+            align-items: center;
             padding: 1%;
         }
+    
         nav a {
             color: #ffff00;
             text-decoration: none;
-
-            /* margin: 0 10px; */
             border-radius: 5px;
             transition: background-color 0.3s ease;
         }
+    
         nav div:first-child {
-            flex-basis: 75%; /* First div takes up 75% */
+            flex-basis: 75%;
         }
+    
         nav div:last-child {
-            flex-basis: 25%; /* Last div takes up 25% */
-            text-align: right; /* Align links to the right */
+            flex-basis: 25%;
+            text-align: right;
         }
-
+    
         .content {
             color: #ce9178;
             display: flex;
             padding: 20px;
         }
-        
-        .about-me {
-            background-color: #2d2d30; /* Grey background */
-            border-radius: 10px; /* Rounded corners */
-            padding: 20px; /* Padding inside the box */
-            flex: 20%; /* About Me section takes up 40% */
-            margin-right: 20px; /* Add some spacing */
+    
+        .about-me,
+        .currently-working-on,
+        .most-recent-project,
+        .news {
+            opacity: 0;
+            animation: fadeIn 1s ease forwards;
+        }
+    
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    
+        .about-me{
+            animation-delay: 0.5s; /* Adjust delay as needed */
+        }
+        .currently-working-on
+        {
+            animation-delay: 1s; /* Adjust delay as needed */
+        }
+        .most-recent-project
+        {
+            animation-delay: 1.125s; /* Adjust delay as needed */
         }
         .news {
-            background-color: #2d2d30; /* Grey background */
-            border-radius: 10px; /* Rounded corners */
-            padding: 20px; /* Padding inside the box */
-            flex: 60%; /* News table takes up 60% */
-            overflow: auto; /* Enable scrolling for the entire div */
+            animation-delay: 0.75s; /* Adjust delay as needed */
         }
+    
+        .about-me {
+            background-color: #2d2d30;
+            border-radius: 10px;
+            padding: 20px;
+            flex: 20%;
+            margin-right: 20px;
+        }
+    
+        .currently-working-on {
+            background-color: #2d2d30;
+            border-radius: 10px;
+            padding: 20px;
+            flex: 50%;
+            margin-right: 20px;
+        }
+    
+        .most-recent-project {
+            background-color: #2d2d30;
+            border-radius: 10px;
+            padding: 20px;
+            flex: 50%;
+            margin-right: 20px;
+        }
+    
+        .news {
+            background-color: #2d2d30;
+            border-radius: 10px;
+            padding: 20px;
+            flex: 60%;
+            overflow: auto;
+        }
+    
         .image-container {
             text-align: center;
             margin-bottom: 20px;
         }
+    
         .image-container img {
             max-width: 100%;
             height: auto;
         }
+    
         .caption {
             font-style: italic;
         }
+    
         table {
             width: 100%;
             border-collapse: collapse;
-            border-spacing: 0; /* Remove spacing between table cells */
+            border-spacing: 0;
         }
-        th, td {
+    
+        th,
+        td {
             padding: 8px;
             border-bottom: 1px solid #ddd;
             text-align: left;
             color: #6a9955
         }
+    
         th {
             background-color: #333;
             color: #ffff00;
         }
+    
         .scrollable-table {
-            max-height: 1000px; /* Adjust as needed */
+            max-height: 1000px;
             overflow-y: auto;
         }
     </style>
+    
 </head>
+
 <body>
     <header>
         <nav>
-            <div style="font-size: 36px;">Sai Coumar</div>
+            <div style="font-size: 36px;">root@saiccoumar:/home $ </div>
             <div>
                 <a href="index.html" style="font-size: 18px;">Home</a>
-                <a href="about.html" style="font-size: 18px;">About</a>
                 <a href="portfolio.html" style="font-size: 18px;">Portfolio</a>
-                <a href="contact.html" style="font-size: 18px;">Contact</a>
+                <a href="links.html" style="font-size: 18px;">Links</a>
             </div>
         </nav>
     </header>
 
     <div class="content">
         <div class="about-me">
-            <h2 style="color: #8bdcd9;">Sai Coumar</h2>
+            <h2 style="color: #8bdcd9;">$ Sai Coumar</h2>
             <div class="image-container">
                 <img style="width: 40%; float: left; margin-right: 20px;" src="profile.jpg" alt="Profile Image">
             </div>
-            <p> Hi everyone! I'm Sai and I've just graduated from Purdue University with a Bachelors of Science in Computer Science and
-                 Data Science. I'm currently applying to
-                  become a PhD student in Computer Science with a focus in applied machine 
-                  learning. I'm primarily interested in Artificial Intelligence for Unmanned Aerial Vehicles (UAVs) and Machine Learning for Image Processing, but I also do some stuff with classical AI and game theory. I'm also a big fan of retro gaming and emulation and I love Final Fantasy.  </p>
-                    </div>
+            <p> <span style="color: #be2eab;">~</span> Hi everyone! I'm Sai and I've just graduated from Purdue University with a Bachelors of Science in
+                Computer Science and
+                Data Science. I'm currently applying to
+                become a PhD student in Computer Science with a focus in applied machine
+                learning.
+                I'm primarily interested in Artificial Intelligence for Unmanned Aerial Vehicles (UAVs) and Machine
+                Learning for Image Processing, but I also do some stuff with classical AI and game theory.
+                I'm also a big fan of retro gaming and emulation and I love Final Fantasy! </p>
+        </div>
         <div class="news">
-            <h2 style="color: #8bdcd9;">News</h2>
+            <h2 style="color: #8bdcd9;">$ News</h2>
             <div class="scrollable-table">
                 <table>
                     <thead>
@@ -128,19 +194,57 @@
                     <tbody>
                         <tr>
                             <td>2024-05-10</td>
-                            <td>I've officially graduated from Purdue University with my Bachelors of Science in Computer Science and Data Science.</td>
+                            <td>I've officially graduated from Purdue University with my Bachelors of Science in
+                                Computer Science and Data Science.</td>
                         </tr>
                         <tr>
                             <td>2024-01-06</td>
-                            <td>My poker framework for testing AI algorithms is now complete! Check it out @ https://github.com/saiccoumar/Poker.</td>
+                            <td>My poker framework for testing AI algorithms is now complete! Check it out @
+                                https://github.com/saiccoumar/Poker.</td>
                         </tr>
-                        
+
                         <!-- More rows -->
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
+    <div class="content">
+        <div class="currently-working-on">
+            <h2 style="color: #8bdcd9;">$ Currently Working On:</h2>
+            <div class="image-container">
+                <img style="width: 40%; float: right; margin-right: 20px;" src="moss.png" alt="Profile Image">
+            </div>
+            <p> <span style="color: #be2eab;">~</span> I'm currently doing research on MOSS and how it stands against a world with rapidly evolving 
+                generative AIs.</p>
+            <p>
+                <span style="color: #be2eab;">~</span> While I was a Teaching Assistant for CS250 at Purdue, a student who got roped into an academic integrity violation 
+                had a discussion about how MOSS works and how it could be beat. It's really interesting to understand the limitations
+            of our software and how we can adapt existing technologies to handle new technologies </p>
+            <p>  <span style="color: #be2eab;">~</span> 
+                I'm also quite enjoying working with cutting edge LLMs! It's so interesting to see technologies come out one day
+                and use them the next. The open-source community for LLMs has made accessibility so simple and these tools are incredibly well designed.
+
+            </p>
+
+        </div>
+        <div class="most-recent-project">
+            <h2 class="project-title" style="color: #8bdcd9;">$ Pinned Project:</h2>
+            <div class="image-container">
+                <img style="width: 40%; float: left; margin-right: 20px;" src="miku.png" alt="Profile Image">
+            </div>
+            <p> <span style="color: #be2eab;">~</span> The one-year anniversary on my ASCII converter is coming up so I want to highlight it for a bit! This is hands my favorite
+                project of all time.</p>
+            <p>
+                <span style="color: #be2eab;">~</span>  This program would take in image input and convert it to ASCII art which would get outputted 
+            directly into the terminal. I was even able to achieve real time conversions for live input or video input as well, with or without color, as well since the algorithms
+        were quite efficient. </p>
+            <p>  <span style="color: #be2eab;">~</span> I'm considering revisiting this using generative deep learning to take a more...overengineered...approach to this task. I'm still yet to see something as fleshed out as I imagine and I think it could come up with some really interesting results.
+
+            </p>
+        </div>
+    </div>
 
 </body>
+
 </html>
