@@ -7,68 +7,75 @@
     <title>Sai Coumar</title>
     <style>
         body {
-    font-family: Monospace, monospace;
-    margin: 0;
-    padding: 0;
-    background-color: #252526;
-}
+            font-family: Monospace, monospace;
+            margin: 0;
+            padding: 0;
+            background-color: #252526;
+        }
 
-header {
-    font-family: Monospace, monospace;
-    background-color: #3e3e42;
-    color: #ffff00;
-    padding: 1%;
-}
+        header {
+            font-family: Monospace, monospace;
+            background-color: #3e3e42;
+            color: #ffff00;
+            padding: 1%;
+        }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1%;
-}
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1%;
+        }
 
-nav a {
-    color: #ffff00;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
+        nav a {
+            color: #ffff00;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
 
-nav div:first-child {
-    flex-basis: 75%;
-}
+        nav div:first-child {
+            flex-basis: 75%;
+        }
 
-nav div:last-child {
-    flex-basis: 25%;
-    text-align: right;
-}
+        nav div:last-child {
+            flex-basis: 25%;
+            text-align: right;
+        }
 
-.content {
-    color: #ce9178;
-    display: flex;
-    padding: 20px;
-    flex-wrap: wrap; /* Allow items to wrap */
-}
+        .content {
+            color: #ce9178;
+            display: flex;
+            padding: 20px;
+            flex-wrap: wrap;
+            /* Allow items to wrap */
+        }
 
-/* Adjustments for mobile */
-@media (max-width: 768px) {
-    .content {
-        flex-direction: column; /* Stack items vertically */
-    }
-    .about-me,
-    .currently-working-on,
-    .most-recent-project,
-    .news {
-        margin-bottom: 20px; /* Add some space between sections */
-    }
-    .about-me,
-    .currently-working-on,
-    .most-recent-project,
-    .news {
-        flex: 100%; /* Make sections full width on small screens */
-    }
-}
-    
+        /* Adjustments for mobile */
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+                /* Stack items vertically */
+            }
+
+            .about-me,
+            .currently-working-on,
+            .most-recent-project,
+            .news {
+                max-width: 768px;
+                margin-bottom: 20px;
+                /* Add some space between sections */
+            }
+
+            .about-me,
+            .currently-working-on,
+            .most-recent-project,
+            .news {
+                flex: 100%;
+                /* Make sections full width on small screens */
+            }
+        }
+
         .about-me,
         .currently-working-on,
         .most-recent-project,
@@ -76,31 +83,37 @@ nav div:last-child {
             opacity: 0;
             animation: fadeIn 1s ease forwards;
         }
-    
+
         @keyframes fadeIn {
             from {
                 opacity: 0;
             }
+
             to {
                 opacity: 1;
             }
         }
-    
-        .about-me{
-            animation-delay: 0.5s; /* Adjust delay as needed */
+
+        .about-me {
+            animation-delay: 0.5s;
+            /* Adjust delay as needed */
         }
-        .currently-working-on
-        {
-            animation-delay: 1s; /* Adjust delay as needed */
+
+        .currently-working-on {
+            animation-delay: 1s;
+            /* Adjust delay as needed */
         }
-        .most-recent-project
-        {
-            animation-delay: 1.125s; /* Adjust delay as needed */
+
+        .most-recent-project {
+            animation-delay: 1.125s;
+            /* Adjust delay as needed */
         }
+
         .news {
-            animation-delay: 0.75s; /* Adjust delay as needed */
+            animation-delay: 0.75s;
+            /* Adjust delay as needed */
         }
-    
+
         .about-me {
             background-color: #2d2d30;
             border-radius: 10px;
@@ -108,7 +121,7 @@ nav div:last-child {
             flex: 20%;
             margin-right: 20px;
         }
-    
+
         .currently-working-on {
             background-color: #2d2d30;
             border-radius: 10px;
@@ -116,7 +129,7 @@ nav div:last-child {
             flex: 50%;
             margin-right: 20px;
         }
-    
+
         .most-recent-project {
             background-color: #2d2d30;
             border-radius: 10px;
@@ -124,7 +137,7 @@ nav div:last-child {
             flex: 50%;
             margin-right: 20px;
         }
-    
+
         .news {
             background-color: #2d2d30;
             border-radius: 10px;
@@ -132,27 +145,27 @@ nav div:last-child {
             flex: 60%;
             overflow: auto;
         }
-    
+
         .image-container {
             text-align: center;
             margin-bottom: 20px;
         }
-    
+
         .image-container img {
             max-width: 100%;
             height: auto;
         }
-    
+
         .caption {
             font-style: italic;
         }
-    
+
         table {
             width: 100%;
             border-collapse: collapse;
             border-spacing: 0;
         }
-    
+
         th,
         td {
             padding: 8px;
@@ -160,18 +173,18 @@ nav div:last-child {
             text-align: left;
             color: #6a9955
         }
-    
+
         th {
             background-color: #333;
             color: #ffff00;
         }
-    
+
         .scrollable-table {
             max-height: 1000px;
             overflow-y: auto;
         }
     </style>
-    
+
 </head>
 
 <body>
@@ -192,7 +205,8 @@ nav div:last-child {
             <div class="image-container">
                 <img style="width: 40%; float: left; margin-right: 20px;" src="profile.jpg" alt="Profile Image">
             </div>
-            <p> <span style="color: #be2eab;">~</span> Hi everyone! I'm Sai and I've just graduated from Purdue University with a Bachelors of Science in
+            <p> <span style="color: #be2eab;">~</span> Hi everyone! I'm Sai and I've just graduated from Purdue
+                University with a Bachelors of Science in
                 Computer Science and
                 Data Science. I'm currently applying to
                 become a PhD student in Computer Science with a focus in applied machine
@@ -214,7 +228,8 @@ nav div:last-child {
                     <tbody>
                         <tr>
                             <td>2024-05-12</td>
-                            <td>I've uploaded a few datasets I've curated in personal projects to kaggle. Check them out @ https://www.kaggle.com/redsilhouette/datasets! </td>
+                            <td>I've uploaded a few datasets I've curated in personal projects to kaggle. Check them out
+                                @ https://www.kaggle.com/redsilhouette/datasets! </td>
                         </tr>
                         <tr>
                             <td>2024-05-10</td>
@@ -239,14 +254,19 @@ nav div:last-child {
             <div class="image-container">
                 <img style="width: 20%; float: right; margin-right: 20px;" src="transformer.webp" alt="Image">
             </div>
-            <p> <span style="color: #be2eab;">~</span> I'm currently studying transformer model architecture and it's applications in
-            non-language contexts</p>
+            <p> <span style="color: #be2eab;">~</span> I'm currently studying transformer model architecture and it's
+                applications in
+                non-language contexts</p>
             <p>
-                <span style="color: #be2eab;">~</span> Transformers are so fun and are the backbone of every generative language model right now
-            but I have a sneaking suspicion that the applications it has towards tasks that are less language oriented are severely undercut
-            by the hype around language models. I'm hoping to really dig deep with the Transformer architecture but so far the research 
-            has been difficult to interpret...</p>
-            <p>  <span style="color: #be2eab;">~</span> 
+                <span style="color: #be2eab;">~</span> Transformers are so fun and are the backbone of every generative
+                language model right now
+                but I have a sneaking suspicion that the applications it has towards tasks that are less language
+                oriented are severely undercut
+                by the hype around language models. I'm hoping to really dig deep with the Transformer architecture but
+                so far the research
+                has been difficult to interpret...
+            </p>
+            <p> <span style="color: #be2eab;">~</span>
                 We might be seeing a new iteration of ASCII converter soon!
             </p>
 
@@ -256,15 +276,20 @@ nav div:last-child {
             <div class="image-container">
                 <img style="width: 40%; float: left; margin-right: 20px;" src="miku.png" alt="Image">
             </div>
-            <p> <span style="color: #be2eab;">~</span> The one-year anniversary on my ASCII converter is coming up 
+            <p> <span style="color: #be2eab;">~</span> The one-year anniversary on my ASCII converter is coming up
                 so I want to highlight it for a bit! This is hands down my favorite
                 project of all time.</p>
             <p>
-                <span style="color: #be2eab;">~</span>  This program would take in image input and convert it to ASCII art 
-                which would get outputted 
-                directly into the terminal. I was even able to achieve real time conversions for live input or video input as well, with or without color, as well since the algorithms
-                were quite efficient. </p>
-            <p>  <span style="color: #be2eab;">~</span> I'm considering revisiting this using generative deep learning to take a more...overengineered...approach to this task. I'm still yet to see something as fleshed out as I imagine and I think it could come up with some really interesting results.
+                <span style="color: #be2eab;">~</span> This program would take in image input and convert it to ASCII
+                art
+                which would get outputted
+                directly into the terminal. I was even able to achieve real time conversions for live input or video
+                input as well, with or without color, as well since the algorithms
+                were quite efficient.
+            </p>
+            <p> <span style="color: #be2eab;">~</span> I'm considering revisiting this using generative deep learning to
+                take a more...overengineered...approach to this task. I'm still yet to see something as fleshed out as I
+                imagine and I think it could come up with some really interesting results.
 
             </p>
         </div>
